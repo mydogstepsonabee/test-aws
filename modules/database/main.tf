@@ -16,5 +16,5 @@ resource "aws_db_instance" "database" {
   db_subnet_group_name    = var.vpc.database_subnet_group
   vpc_security_group_ids  = [var.sg.db]
   skip_final_snapshot     = true
-  backup_retention_period = 50
+  #backup_retention_period = 50
 }
