@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Accurics
-        uses: accurics/accurics-action@v2.25
+        uses: accurics/accurics-action@latest
         id: accurics
         env:
           REPO_URL: ${{ github.repositoryUrl }}
@@ -39,5 +39,5 @@ jobs:
           url: https://cloud.tenable.com/cns
           repo: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
           directories:
-            "./demo-terraform/aws"
+            "./"
           # Optional args
