@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Accurics
-        uses: accurics/accurics-action@latest
+        uses: accurics/accurics-action@v2.25
         id: accurics
         env:
           REPO_URL: ${{ github.repositoryUrl }}
