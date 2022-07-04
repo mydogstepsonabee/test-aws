@@ -1,6 +1,6 @@
 data "aws_availability_zones" "available" {}
 
-module "vpc" { #A
+module "vpc" {
   source                           = "terraform-aws-modules/vpc/aws"
   version                          = "2.64.0"
   name                             = "${var.namespace}-vpc"
@@ -33,8 +33,8 @@ module "websvr_sg" {
       security_groups = [module.lb_sg.security_group.id]
     },
     {
-      port        = 22 #C
-      cidr_blocks = ["10.0.0.0/16"] #C
+      port        = 22
+      cidr_blocks = ["10.0.0.0/16"]
     }
   ]
 }
