@@ -20,7 +20,7 @@ module "lb_sg" {
   vpc_id = module.vpc.vpc_id
   ingress_rules = [{
     port        = 80
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/16"]
   }]
 }
 
