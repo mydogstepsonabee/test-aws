@@ -65,7 +65,7 @@ module "alb" {
   target_groups = [
     { name_prefix      = "websvr"
       backend_protocol = "HTTP"
-      backend_port     = 8090
+      backend_port     = 8070
       target_type      = "instance"
     }
   ]
