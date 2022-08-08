@@ -34,6 +34,8 @@ jobs:
           # Required by Accurics
           scan-mode: "scan"
           fail-on-violations: false
+          debug-mode: true
+          pipeline: true
           app-id: ${{ secrets.ACCURICS_APP_ID }}
           env-id: ${{ secrets.ACCURICS_ENV_ID }}
           url: https://cloud.tenable.com/cns
