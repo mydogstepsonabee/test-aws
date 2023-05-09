@@ -11,10 +11,12 @@ resource "aws_db_instance" "database" {
   instance_class         = "db.t2.micro"
   identifier             = "${var.namespace}-db-instance"
   name                   = "pets"
-  username               = "admin"
+  username               = "<some_random_username>"
   password               = random_password.password.result
   db_subnet_group_name   = var.vpc.database_subnet_group
   vpc_security_group_ids = [var.sg.db]
   skip_final_snapshot    = true
   #backup_retention_period = 50
+  iam_database_authentication_enabled = true
+  backup_retention_period             = 30
 }
